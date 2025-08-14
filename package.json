@@ -1,0 +1,25 @@
+{
+  "name": "my_food_delivery_app",
+  "version": "1.0.0",
+  "description": "my_food_delivery_app",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushiv0722/my_food_deleivery_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sushiv0722/my_food_deleivery_app/issues"
+  },
+  "homepage": "https://github.com/sushiv0722/my_food_deleivery_app#readme",
+  "dependencies": {
+    "parcel": "^2.15.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  }
+}

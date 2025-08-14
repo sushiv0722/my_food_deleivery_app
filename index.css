@@ -1,0 +1,39 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+.head-logo {
+  width: 200px;
+  height: 150px;
+}
+#header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+#nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 40px;
+  font-size: 25px;
+  list-style: none;
+  cursor: pointer;
+}
+#nav-container {
+  margin: 60px;
+}
+.card-item {
+  border: 1px solid black;
+  margin: 10px;
+  width: 200px;
+}
+.rest-logo {
+  height: 150;
+  width: 100%;
+}
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
