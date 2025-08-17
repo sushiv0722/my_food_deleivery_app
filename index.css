@@ -40,3 +40,18 @@
 #search-btn {
   margin: 20px;
 }
+.body_btn {
+  height: 30px;
+  width: 50px;
+  color: white;
+  background-color: black;
+}
+.search_container {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+.filter_section {
+  display: flex;
+  justify-content: center;
+}
