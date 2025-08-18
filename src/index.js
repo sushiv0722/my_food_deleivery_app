@@ -1,7 +1,14 @@
 import React from "react";
-import ReactDom from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import HeaderComponent from "./components/HeaderComponent";
 import BodyComponent from "./components/BodyComponent";
+import { createBrowserRouter } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import AboutUs from "./components/AboutUs";
+import Help from "./components/Help";
+import { useRouteError } from "react-router-dom";
+import Error from "./components/Error";
+import { Outlet } from "react-router-dom";
 
 // body component
 
@@ -13,10 +20,32 @@ const AppComponent = () => {
   return (
     <div>
       <HeaderComponent />
-      <BodyComponent />
+      <Outlet />
     </div>
   );
 };
 
-const root = ReactDom.createRoot(document.getElementById("root"));
-root.render(<AppComponent />);
+const AppRoutes = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppComponent />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <BodyComponent />,
+      },
+      {
+        path: "/about",
+        element: <AboutUs />,
+      },
+      {
+        path: "/help",
+        element: <Help />,
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={AppRoutes} />);
